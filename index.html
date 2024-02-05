@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fi">
+	<head>
+		<title>HTML Harjoitus</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		<h1>Peruselementit ja attribuutit</h1>
+	<p>HTML tulee sanoista Hypertext Markup Language. Tämä tarkoittaa lyhyesti merkintäkieltä hypertekstille. Hyperteksti on tekstiä, joka liittyy teksteihin linkkien avulla</p>
+
+	<div id="piilotettavaElementti">
+    <p id="guid1" class="esimerkki">Tässä harjoituksessa sulkeen sisällä on ilmoitettu elementti ja tarvittavat attribuutit ja niiden arvo on hakasulkeen sisällä</p>
+
+
+
+	</div>
+
+
+	<h2 id="guid2">Elementtityyppejä</h2>
+	<p class="esimerkki-box">HTML:ssä on erilaisia elementtejä eri tarkoitukseen. Elementit voidaan jakaa block ja inline -elementteihin. Lyhyesti ja karkeasti, inline elementit tekstisisältöä tms. ja block elementit jäsentävät sivua. Yleisesti block elementit voivat olla sivulla itsenäisesti - inline elementit ovat block elementtien sisällä. Näistä poikkeuksia, esim listat, kuvat, taulukot jne. </p>
+
+	<h3>Inline elementtiesimerkkejä</h3>
+	<p class="esimerkki">Inline elementtejä kuten <i>kursiivi</i> (i), <b>lihavointi</b> (b), <u>alleviivaus</u> (u) voidaan käyttää tekstin muotoiluun tai niillä voidaan asettaa tekstin joukkoon toiminnallisuuksia kuten linkkielementti (a) ja span-elementti, jolla voidaan tuoda CSS- ja Javascript-tiedostojen määrityksiä ja toiminallisuuksia sivulle. Myös kuvaelementti (img) on inline elementti, vaikka se voi toimia myös block tyyppisenä elementtinä. </p>
+	<h3>Block elementtejä</h3>
+	<p>Block elementtejä käytetään sivuston jäsentämiseen ja taittoon. Yksinkertainen esimerkki tästä on kappale p elementti</p>
+	<p>Block elementtejä käytetään usein ns. container-elementteinä, tästä hyvä esimerkki on div ja section elementti.</p>
+	<p>Joidenkin block elementtoen sisältö on ennalta määritelty, tällaisia esimerkiksi listat ja taulukot.</p>
+	
+	<h2 id="taulukko1">Taulukko</h2>
+	<p>Taulukko aloitetaan table elementillä, otsikko erotetaan thead-elementillä, sisältö erotetaan tbody elementillä. Rivi merkataan tr elementillä ja sen sisälle laietaan solut td elementillä.</p>
+	<table id="taulukko1" class="taulukko">
+		<tbody>
+			<tr>
+				<td>Solu11</td>
+				<td>Solu12</td>
+				<td>Solu13</td>
+				</tr>
+				<tr>
+					<td>Solu21</td>
+					<td>Solu22</td>
+					<td>Solu23</td>
+					</tr>
+					<tr>
+						<td>Solu31</td>
+						<td>Solu32</td>
+						<td>Solu32</td>
+						</tr>
+						</tbody>
+						</table>
+						
+	<h2>Listat</h2>
+	<p>Listat sisältävät lista tyyppi elementin, ol tai ul ja jokainen listan ns. entry merkitään li elementillä</p>
+
+	<h3>Numeroitu lista</h3>
+	<ol>
+		<li>Lista</li>
+		<li>Lista</li>
+		<li>Lista</li>
+    </ol>
+
+	<h3>Numeroimaton lista</h3>
+	<ul>
+		<li>Lista</li>
+		<li>Lista</li>
+		<li>Lista</li>
+	</ul>	
+	<h2>Kuva</h2>
+	<p>Kuva voidaan laittaa sisältön img elementillä, jonka attribuutteina on kuvan lähde eli source->src, kuvan vaihtoehtoinen näkymä tekstinluvulle tms. (eli alternative content -> alt.) Myös kuvan koko voidaan antaa korkeus (height) ja leveys (widht) attributeilla suhteellisena (%, vm)</p>
+	<img src="esimerkki.png" alt="Kuvan vaihtoehtoinen teksti" />
+<h2Linkki</h2>
+<p>Linkit ovat HTML:n sielu. Linkin kohde voi olla samalla sivulla, tällöin riittää viittaus kohteen id:seen kohde voi olla toinen sivu samalla sivustolla, tällöin viittaus voidaan tehdä suhteellisena tai absoluuttisena. Linkki avataan a-elementillä, jolle asetetaan kohde attribuutilla href. Linkin ulkoasu voi muuttaa antamalle sille luokan, jonka ulkoasu määritetään CSS:ssä </p>
+<a href="#guid1">esimerkki1</a>
+<a href="https://www.uwasa.fi/fi" class="ulkoinen">Yliopiston kotisivu</a>
+
+
+<button onclick="setClass()">Paina</button>
+
+	<script>
+		function setClass() {
+			var element = document.getElementById("piilotettavaElementti");
+			element.classList.toggle("jsharkkatyyli");
+		}
+		</script>
+
+
+
+	
+	</body>
+
+</html>
